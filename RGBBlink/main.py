@@ -4,10 +4,9 @@ import time
 pycom.heartbeat(False)
 
 while True:
-    #colors in hexadecimal (0xRRGGBB)
-    pycom.rgbled(0x110000)  # Red
+    pycom.rgbled(0xFF0000)  # Red
     time.sleep(1)
-    pycom.rgbled(0x001100)  # Green
+    pycom.rgbled(0x00FF00)  # Green
     time.sleep(1)
-    pycom.rgbled(0x000011)  # Blue
+    pycom.rgbled(0x0000FF)  # Blue
     time.sleep(1)
