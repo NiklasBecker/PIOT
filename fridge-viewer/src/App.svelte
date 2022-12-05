@@ -2,7 +2,8 @@
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
   
-  let name = "test"
+  let array = ["1", "2"]
+  let val = ""
 </script>
 
 <main>
@@ -15,6 +16,14 @@
     </a>
   </div>
   <h1>Vite + Svelte</h1>
+
+  {#each array as item}
+  <div>
+    {item}
+  </div>
+  {/each}
+
+  <input bind:value={val}>
 
   <div class="card">
     <Counter />
