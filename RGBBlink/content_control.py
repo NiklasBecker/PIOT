@@ -16,7 +16,8 @@ def add_item_to_data(data, new_id, product_name):
 
 def calc_new_id(data):
     number_of_items = len(data['items'])
-
     last_id_in_fridge = data['items'][number_of_items - 1]['item_id']
+    return last_id_in_fridge + 1
 
-    new_id = last_id_in_fridge + 1
+# TODO
+# def recalculate_ids(data)

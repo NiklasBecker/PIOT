@@ -3,7 +3,7 @@ import cv2
 from pyzbar.pyzbar import decode
   
 # Make one method to decode the barcode
-def BarcodeReader(image):
+def read_barcode(image):
 
     # read the image in numpy array using cv2
     img = cv2.imread(image)
@@ -43,4 +43,4 @@ def BarcodeReader(image):
 if __name__ == "__main__":
   # Take the image from user
     image="img/test.jpg"
-    BarcodeReader(image)
+    read_barcode(image)
