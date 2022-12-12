@@ -9,10 +9,12 @@ product_code =  3033490506629
 response = requests.get('https://world.openfoodfacts.org/api/v0/product/' + str(product_code) + '.json')
 # print(response.json())
 json_product = response.json()
-product_name = json_product['product']['product_name']
+# product_name = json_product['product']['product_name']
 print(json_product['product']['product_name'])
 
 contents = get_from_file()
-new_id = calc_new_id(contents)
-add_item_to_data(contents, new_id, product_name)
-write_to_file(contents)
+# new_id = calc_new_id(contents)
+# add_item_to_data(contents, new_id, product_name)
+# write_to_file(contents)
+
+recalculate_ids(contents)
