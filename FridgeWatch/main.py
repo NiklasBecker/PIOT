@@ -4,11 +4,9 @@ import requests
 from content_control import *
 
 product_code =  3033490506629
-reader_data = barcodereader.read_barcode("img\Kinder.jpg")
+reader_data = barcodereader.read_barcode("img/Kinder.jpg")
 
-code = reader_data.data
-
-print(code)
+print(reader_data)
 
 response = requests.get('https://world.openfoodfacts.org/api/v0/product/' + str(product_code) + '.json')
 # print(response.json())
@@ -20,5 +18,7 @@ contents = get_from_file()
 # new_id = calc_new_id(contents)
 # add_item_to_data(contents, new_id, product_name)
 # write_to_file(contents)
+
+get_item_id(contents, "Nutella")
 
 recalculate_ids(contents)

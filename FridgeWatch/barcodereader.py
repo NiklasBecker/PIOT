@@ -1,7 +1,7 @@
 # Importing libraries
 import cv2
 from pyzbar.pyzbar import decode
-  
+
 # Make one method to decode the barcode
 def read_barcode(image):
 
@@ -42,5 +42,5 @@ def read_barcode(image):
  
 if __name__ == "__main__":
   # Take the image from user
-    image="img\Kinder.jpg"
+    image="img/Kinder.jpg"
     read_barcode(image)
