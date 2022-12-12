@@ -4,7 +4,11 @@ import requests
 from content_control import *
 
 product_code =  3033490506629
-# barcodereader.BarcodeReader(Img.jpg)
+reader_data = barcodereader.read_barcode("img\Kinder.jpg")
+
+code = reader_data.data
+
+print(code)
 
 response = requests.get('https://world.openfoodfacts.org/api/v0/product/' + str(product_code) + '.json')
 # print(response.json())

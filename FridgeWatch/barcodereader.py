@@ -42,5 +42,5 @@ def read_barcode(image):
  
 if __name__ == "__main__":
   # Take the image from user
-    image="img/test.jpg"
+    image="img\Kinder.jpg"
     read_barcode(image)
