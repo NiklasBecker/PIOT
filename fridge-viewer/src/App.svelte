@@ -2,7 +2,21 @@
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
   
-  let array = ["1", "2"]
+  async function getData()
+  {
+    let fridgeContent = await fetch('http://localhost:8000/fridge-items', {
+                                    method: 'GET'
+                                    })
+                              .then(res => res.json())
+                              .catch(function(error){console.log(error)})
+    console.log(fridgeContent)
+    return await fridgeContent
+  }
+
+  console.log("TEST")
+  let fridgeContent = []
+  getData().then(data => (fridgeContent = data['items']))
+  console.log(fridgeContent)
   let val = ""
 </script>
 
@@ -17,9 +31,9 @@
   </div>
   <h1>Vite + Svelte</h1>
 
-  {#each array as item}
+  {#each fridgeContent as item}
   <div>
-    {item}
+    {item.name}
   </div>
   {/each}
 
