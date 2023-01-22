@@ -2,7 +2,7 @@
   
   async function getData()
   {
-    let fridgeContent = await fetch('http://localhost:8000/fridge-items', {
+    let fridgeContent = await fetch('http://192.168.192.50:8000/fridge-items', {
                                     method: 'GET'
                                     })
                               .then(res => res.json())
@@ -36,7 +36,7 @@
     <h4>Add new item:</h4>
     <form on:submit|preventDefault={
         () => 
-          fetch('http://localhost:8000/add-new-item', {
+          fetch('http://192.168.192.50:8000/add-new-item', {
                                     method: 'POST',
                                     headers: {
                                       'Content-Type': 'application/json'
