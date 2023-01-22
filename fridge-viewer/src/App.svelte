@@ -5,7 +5,7 @@
     let fridgeContent = await fetch('http://192.168.192.50:8000/fridge-items', {
                                     method: 'GET',
                                     headers: {
-                                      'access-control-allow-origin': '*'
+                                      'Access-Control-Allow-Origin': '*'
                                     }
                                     })
                               .then(res => res.json())

@@ -14,7 +14,8 @@ class Item(BaseModel):
 app = FastAPI()
 
 origins = [
-    "*"
+    "http://192.168.192.50:5173",
+    "http://192.168.192.50:8000"
 ]
 
 app.add_middleware(
