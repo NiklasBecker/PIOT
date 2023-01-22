@@ -3,10 +3,7 @@
   async function getData()
   {
     let fridgeContent = await fetch('http://192.168.192.50:8000/fridge-items', {
-                                    method: 'GET',
-                                    headers: {
-                                      'Access-Control-Allow-Origin': '*'
-                                    }
+                                    method: 'GET'
                                     })
                               .then(res => res.json())
                               .catch(function(error){console.log(error)})
@@ -42,8 +39,7 @@
           fetch('http://192.168.192.50:8000/add-new-item', {
                                     method: 'POST',
                                     headers: {
-                                      'Content-Type': 'application/json',
-                                      'Access-Control-Allow-Origin': '*'
+                                      'Content-Type': 'application/json'
                                     },
                                     body: JSON.stringify(
                                     {
