@@ -14,7 +14,7 @@ class Item(BaseModel):
 app = FastAPI()
 
 origins = [
-    *
+    "*"
 ]
 
 app.add_middleware(
