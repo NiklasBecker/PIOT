@@ -55,6 +55,25 @@
       <input type="date" bind:value={date} id="date"/><br>
       <input type="submit" value="Submit" id="post-btn">
     </form>
+    <form on:submit|preventDefault={
+      () => 
+        fetch('http://localhost:8000/add-new-item-with-barcode', {
+                                  method: 'POST',
+                                  headers: {
+                                    'Content-Type': 'application/json'
+                                  },
+                                  body: JSON.stringify(
+                                  {
+                                    'name': 'empty',
+                                    'date': new Date(date).getTime()
+                                  })})
+                            .then(res => res.json())
+                            .catch(function(error){console.log(error)})
+    }>
+      <label for="date"> Enter item date of expiry:</label>
+      <input type="date" bind:value={date} id="date"/><br>
+      <input type="submit" value="Submit" id="post-btn">
+    </form>
   </div>
 
 </main>

@@ -15,15 +15,17 @@ print(json_product['product']['product_name'])
 
 date = datetime.datetime.now()
 
-contents = get_from_file()
-new_id = calc_new_id(contents)
-new_item = construct_item(new_id, product_name, date.isoformat())
-add_item_to_data(contents, new_item)
-write_to_file(contents)
+#contents = get_from_file()
+#new_id = calc_new_id(contents)
+#new_item = construct_item(new_id, product_name, date.isoformat())
+#add_item_to_data(contents, new_item)
+#write_to_file(contents)
 
-index = get_item_id(contents, "Nutella")
+#index = get_item_id(contents, "Nutella")
 
-test = requests.get("http://localhost:8000/trigger-new-item")
-print(test.json())
+#test = requests.get("http://localhost:8000/trigger-new-item")
+#print(test.json())
 
+
+request_item_data(product_code)
 # remove_item(contents, index)

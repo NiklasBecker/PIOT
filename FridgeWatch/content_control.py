@@ -58,4 +58,6 @@ def recalculate_ids(data):
 # Requesting Data from the openfoodfacts API. Helper function for the api.py
 def request_item_data(product_code):
     item_data = requests.get('https://world.openfoodfacts.org/api/v0/product/' + str(product_code) + '.json')
-    return item_data
+    json_product = item_data.json()
+    product_name = json_product['product']['product_name']
+    return product_name

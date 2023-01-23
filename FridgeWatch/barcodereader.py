@@ -28,11 +28,11 @@ def read_barcode(image):
                           (x + w+10, y + h+10),
                           (255, 0, 0), 2)
              
-            # if barcode.data!="":
+            if barcode.data!="":
                
             # Print the barcode data
-                # print(barcode.data)
-                # print(barcode.type)
+                print(barcode.data)
+                print(barcode.type)
                  
     #Display the image
     cv2.imshow("Image", img)
