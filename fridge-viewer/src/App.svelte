@@ -54,7 +54,8 @@
       <label for="date"> Enter item date of expiry:</label>
       <input type="date" bind:value={date} id="date"/><br>
       <input type="submit" value="Submit" id="post-btn">
-    </form>
+    </form><br>
+    <h4>Add new item based on barcode:</h4>
     <form on:submit|preventDefault={
       () => 
         fetch('http://localhost:8000/add-new-item-with-barcode', {
